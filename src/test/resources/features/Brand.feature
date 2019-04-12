@@ -1,13 +1,28 @@
-# Login feature review the behavior in thie feature
-Feature: Brand
 
-  Background: Edicion Creacion Eliminacion de Incidentest
+Feature: Crear, Editar Brand
+
+  Background: Brand page is loaded
     Given 'Brand' page is loaded
 
 
-  Scenario: crear
-    And click on 'new brand' button in 'Brand' page
-    And insert "brandcreado" brand name field in 'Dialog Brand' page
+  Scenario Outline : Crear Brand
+    And click on 'new brand' button in 'Brand' page' page
+    And insert "<BrandName>" brand name field in 'Dialog Brand' page
+    And click on 'save' button in 'Dialog Brand' page
+    Examples:
+      | BrandName |
+      | brand1111 |
+
+   Scenario Outline: Editar Brand
+     And click on 'edit brand' button in 'Brand' page
+     And insert "<BrandName>" brand name field in 'Dialog Brand' page
+     And click on 'save' button in 'Edit Dialog Brand' page
+     Then verify "<BrandNameUpdated>" brand is displayed in 'Brand' page
+     Examples:
+      | BrandName |
+      | brand2222    |
+
+
 
 
 

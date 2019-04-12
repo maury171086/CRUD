@@ -1,10 +1,10 @@
+
 package org.umssdiplo.automationv01.core.managepage.dialogo;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.umssdiplo.automationv01.core.managepage.BasePage;
 import org.umssdiplo.automationv01.core.utils.CommonEvents;
-import org.umssdiplo.automationv01.core.utils.PropertyAccessor;
 
 public class RegistroDialogo extends BasePage {
 
@@ -20,19 +20,17 @@ public class RegistroDialogo extends BasePage {
     @FindBy(xpath = "//*[@id=\"save\"]/span")
     private WebElement saveBrandBtn;
 
+
     public RegistroDialogo() {
         CommonEvents.waitWebElementVisible(containerDialog);
     }
 
     public void insertBrandName(String nameBrand){
-
-        String nameB = PropertyAccessor.getInstance().getName();
-        CommonEvents.setInputField(brandNameField, nameB);
-
+        CommonEvents.setInputField(brandNameField, nameBrand);
     }
-    public void saveBrandName (){
 
+
+    public void clickSave() {
         CommonEvents.clickButton(saveBrandBtn);
-
     }
 }
