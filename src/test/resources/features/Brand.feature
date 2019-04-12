@@ -1,6 +1,15 @@
-Feature: Funcionalidad de Brands
+# Login feature review the behavior in thie feature
+Feature: Brand
 
-  Scenario: : Registro de brand en un formulario
-    Given 'Store' page is loaded
-    And click 'add brands' tab in 'Header' page
+  Background: Edicion Creacion Eliminacion de Incidentest
+    Given 'Brand' page is loaded
+
+
+  Scenario: crear
+    And click on 'new brand' button in 'Brand' page
+    And insert "brandcreado" brand name field in 'Dialog Brand' page
+
+
+
+
 

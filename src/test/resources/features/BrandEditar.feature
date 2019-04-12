@@ -1,6 +1,6 @@
 # Login feature review the behavior in thie feature
-Feature: Login
+Feature: BrandEditar
 
-  Scenario: Home page is displayed once set credential in login page
-    Given 'PHP travel' page is loaded
-    And set my credentials on 'Login' page
+  Scenario: editar
+    And click on 'edit brand' button in 'Brand' page
+    And insert "Brand editado" brand name field in 'Dialog Brand' page
